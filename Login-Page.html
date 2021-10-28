@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social-Media-Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="preloader">
+
+    </div>
+    <section id="header-login">
+        <nav>
+            <div class="left-side">
+                <a href=""><img src="/images/logo.png" class="logo"></a>
+                <div class="icon-pics">
+                    <img src="/images/notification.png">
+                    <img src="/images/inbox.png">
+                    <img src="/images/video.png" id="video">
+                </div>
+            </div>
+            <div class="right-side">
+                   <div class="input-section">
+                       <img src="/images/search.png">
+                       <input type="text" placeholder="Search">
+                   </div>
+                 <div class="user-pic">
+                    <img src="/images/status-1.png" id="user">
+                    <span></span>
+                 </div>
+            </div>
+        </nav>
+            <div class="textbox-login">
+                 <h1>Join Facebook</h1>
+                 <div class="slider">
+                     <div>Today</div>
+                     <div>For Fun</div>
+                     <div>For Knowledge</div>
+                 </div>
+            </div>
+            <div class="right-login-side">
+                   <div class="login-form">
+                       <img src="/images/logo.png">
+                       <div class="slide-form">
+                           <span id="logBtn">Login</span>
+                           <span id="RegBtn">Register</span>
+                           <p id="line"></p>
+                       </div>
+                       <form id="Login">
+                           <input type="text" placeholder="username">
+                           <input type="password" placeholder="Password">
+                           <br>
+                           <button type="submit">Login</button>
+                       </form>
+                       <form id="Register">
+                           <input type="text" placeholder="First Name">
+                           <input type="email " placeholder="Enter Email">
+                           <input type="password" placeholder=" Enter Password">
+                           <input type="password" placeholder=" Confirm Password">
+                           <br>
+                           <button type="submit">Login</button>
+                       </form>
+                   </div>
+            </div>
+    </section>
+    <script>
+        var Btn = document.getElementById('ToggleBtn');
+        var element = document.getElementById('menu');
+          Btn.onclick = function(){
+              Btn.classList.toggle('move');
+          }
+    </script>
+    <script>
+        var see = document.getElementById('user');
+        var menu = document.getElementById('menu');
+        
+        menu.style.right = "-325px";
+        see.onclick = function(){
+            if( menu.style.right == "-325px"){
+                menu.style.right = "-5px";
+            }
+            else{
+                menu.style.right = "-325px";
+            }
+        }
+    </script>
+    <script>
+        var logBtn = document.getElementById('logBtn');
+        var RegBtn = document.getElementById('RegBtn');
+        var Login = document.getElementById('Login');
+        var Register = document.getElementById('Register');
+        let line = document.getElementById('line');
+
+        logBtn.onclick = function(){
+            Login.style.transform = "translateX(0px)";
+            Register.style.transform = "translateX(0px)";
+            line.style.transform = "translateX(0px)";
+        }
+        RegBtn.onclick = function(){
+            Login.style.transform = "translateX(300px)";
+            Register.style.transform = "translateX(300px)";
+            line.style.transform = "translateX(100px)";
+        }
+    </script>
+    <script>
+        var preloader = document.getElementById('preloader');
+
+        window.addEventListener('load',function(){
+            preloader.style.display = "none";
+        })
+    </script>
+</body>
+</html>
